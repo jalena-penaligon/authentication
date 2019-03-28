@@ -4,7 +4,8 @@ RSpec.describe 'user registration', type: :feature do
   describe 'when a user visits the site' do
     describe 'they can fill out a registration form' do
       it 'will create a new user' do
-        visit new_user_path
+        visit '/login'
+        click_on("Create an Account")
 
         fill_in 'user[user_name]', with: "Jalena Penaligon"
         fill_in 'user[email_address]', with: "jalena.penaligon@gmail.com"
